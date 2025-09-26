@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Vaibhav Vyavahare</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple To-Do List</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body bgcolor="black" text="yellow">
-    <h1 >Welcome to my website!</h1>
-    <p>Website & me both are under Construction😅 Thank you for visiting .</p>
-    <button id="Click">Click me</button>
-    <script src="logic.js"></script>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div class="input-area">
+            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+        
+        <ul id="taskList">
+            </ul>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
