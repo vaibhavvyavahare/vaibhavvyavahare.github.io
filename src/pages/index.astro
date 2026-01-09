@@ -1,16 +1,31 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import About from '../components/About';
+import BlogList from '../components/BlogList';
+import ProfileLinks from '../components/ProfileLinks';
+import Contact from '../components/Contact';
+import { getCollection } from 'astro:content';
 
+const posts = await getCollection('blog');
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="My Portfolio">
+  <main class="bg-black min-h-screen text-white">
+    <Navbar client:load />
+    
+    <Hero client:load />
+    
+    <div class="space-y-0">
+      <About client:visible />
+      <BlogList client:visible posts={posts} />
+      <ProfileLinks client:visible />
+      <Contact client:visible />
+    </div>
+
+    <footer class="py-8 text-center text-gray-600 text-sm border-t border-white/5">
+      <p>&copy; {new Date().getFullYear()} Portfolio. Built with Astro & React.</p>
+    </footer>
+  </main>
+</Layout>
