@@ -256,24 +256,26 @@ const App = () => {
                     <h3 className="text-4xl font-bold">Start a Conversation</h3>
                   </div>
 
-                  <form className={`p-8 md:p-12 rounded-3xl border shadow-xl transition-all duration-700 ${themeConfig.cardBg}`}>
+                  <form action="https://formsubmit.co/vaibhavvyavahare5@gmail.com" method="POST" className={`p-8 md:p-12 rounded-3xl border shadow-xl transition-all duration-700 ${themeConfig.cardBg}`}>
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_subject" value="New Query from Vaibhav Enterprise!" />
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                       <div>
                         <label className="block text-sm font-medium mb-2 opacity-80">Full Name</label>
-                        <input type="text" className="w-full bg-transparent border-b-2 border-opacity-20 border-current py-3 focus:outline-none focus:border-opacity-100 transition-colors" placeholder="John Doe" />
+                        <input type="text" name="name" required className="w-full bg-transparent border-b-2 border-opacity-20 border-current py-3 focus:outline-none focus:border-opacity-100 transition-colors" />
                       </div>
                       <div>
                         <label className="block text-sm font-medium mb-2 opacity-80">Email Address</label>
-                        <input type="email" className="w-full bg-transparent border-b-2 border-opacity-20 border-current py-3 focus:outline-none focus:border-opacity-100 transition-colors" placeholder="john@example.com" />
+                        <input type="email" name="email" required className="w-full bg-transparent border-b-2 border-opacity-20 border-current py-3 focus:outline-none focus:border-opacity-100 transition-colors" />
                       </div>
                     </div>
 
                     <div className="mb-8">
                       <label className="block text-sm font-medium mb-2 opacity-80">Area of Interest</label>
                       <select
+                        name="interest"
                         className="w-full bg-transparent border-b-2 border-opacity-20 border-current py-3 focus:outline-none focus:border-opacity-100 transition-colors appearance-none outline-none"
-                        value={isSoftwareMode ? 'tech' : 'agri'}
-                        onChange={() => { }}
+                        defaultValue={isSoftwareMode ? 'Software & Tech Solutions' : 'Agri-Export & Products'}
                       >
                         <option value="tech" className="text-black">Software & Tech Solutions</option>
                         <option value="agri" className="text-black">Agri-Export & Products</option>
@@ -282,10 +284,10 @@ const App = () => {
 
                     <div className="mb-10">
                       <label className="block text-sm font-medium mb-2 opacity-80">Message</label>
-                      <textarea rows={4} className="w-full bg-transparent border-b-2 border-opacity-20 border-current py-3 focus:outline-none focus:border-opacity-100 transition-colors resize-none" placeholder="How can we help you?"></textarea>
+                      <textarea name="message" required rows={4} className="w-full bg-transparent border-b-2 border-opacity-20 border-current py-3 focus:outline-none focus:border-opacity-100 transition-colors resize-none"></textarea>
                     </div>
 
-                    <button type="button" className={`w-full py-4 rounded-xl font-bold transition-all shadow-md ${themeConfig.btnPrimary}`}>
+                    <button type="submit" className={`w-full py-4 rounded-xl font-bold transition-all shadow-md ${themeConfig.btnPrimary}`}>
                       Send Message
                     </button>
                   </form>
