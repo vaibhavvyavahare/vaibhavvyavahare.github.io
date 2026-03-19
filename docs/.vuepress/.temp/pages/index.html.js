@@ -1,3 +1,0 @@
-import comp from "C:/Users/LENOVO/Desktop/vaibhav/MyWebsite/docs/.vuepress/.temp/pages/index.html.vue"
-const data = JSON.parse("{\"path\":\"/\",\"title\":\"Hello World\",\"lang\":\"en-US\",\"frontmatter\":{},\"git\":{\"updatedTime\":1767954120000,\"contributors\":[{\"name\":\"Vaibhav Anil Vyavahare\",\"username\":\"\",\"email\":\"vavyavahare_cs@jspmrscoe.edu.in\",\"commits\":1}],\"changelog\":[{\"hash\":\"d3ebccf8b1cfd388f6296cc2e3af402486ecdaab\",\"time\":1767954120000,\"email\":\"vavyavahare_cs@jspmrscoe.edu.in\",\"author\":\"Vaibhav Anil Vyavahare\",\"message\":\"My new Wesite\"}]},\"filePathRelative\":\"README.md\"}")
-export { comp, data }

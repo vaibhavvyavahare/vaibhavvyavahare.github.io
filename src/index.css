@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-tech: #1e3a8a;
+  --color-brand-tech-light: #3b82f6;
+  --color-brand-agri: #2c3e2e;
+  --color-brand-agri-light: #4a6b4e;
+}
+
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+  overflow-x: hidden;
+}
