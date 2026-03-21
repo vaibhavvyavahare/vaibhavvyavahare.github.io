@@ -341,6 +341,26 @@ const App = () => {
               </div>
             </motion.div>
           )}
+          {activePage === 'refund' && (
+            <motion.div
+              key="refund"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="py-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"
+            >
+              <h1 className="text-4xl font-bold mb-8">Cancellation & Refund Policy</h1>
+              <div className="opacity-80 space-y-6 leading-relaxed">
+                <p className="font-semibold">Last updated on 21-03-2026 21:32:27</p>
+                <p>VAIBHAV ENTERPRISE believes in helping its customers as far as possible, and has therefore a liberal cancellation policy. Under this policy:</p>
+                <p>• Cancellations will be considered only if the request is made immediately after placing the order. However, the cancellation request may not be entertained if the orders have been communicated to the vendors/merchants and they have initiated the process of shipping them.</p>
+                <p>• VAIBHAV ENTERPRISE does not accept cancellation requests for perishable items like flowers, eatables etc. However, refund/replacement can be made if the customer establishes that the quality of product delivered is not good.</p>
+                <p>• In case of receipt of damaged or defective items please report the same to our Customer Service team. The request will, however, be entertained once the merchant has checked and determined the same at his own end. This should be reported within Only same day days of receipt of the products. In case you feel that the product received is not as shown on the site or as per your expectations, you must bring it to the notice of our customer service within Only same day days of receiving the product. The Customer Service Team after looking into your complaint will take an appropriate decision.</p>
+                <p>• In case of complaints regarding products that come with a warranty from manufacturers, please refer the issue to them. In case of any Refunds approved by the VAIBHAV ENTERPRISE, it'll take 9-15 Days days for the refund to be processed to the end customer.</p>
+              </div>
+            </motion.div>
+          )}
         </AnimatePresence>
       </main>
 
@@ -355,9 +375,10 @@ const App = () => {
 
           <div className="text-sm opacity-60 text-center md:text-right flex flex-col items-center md:items-end">
             <p>&copy; 2026 Vaibhav Enterprise. All rights reserved.</p>
-            <div className="mt-2 flex space-x-6 cursor-pointer">
+            <div className="mt-2 flex space-x-6 cursor-pointer justify-center md:justify-end flex-wrap gap-y-2">
               <span onClick={() => { setActivePage('privacy'); window.scrollTo(0, 0); }} className="hover:underline transition-all">Privacy Policy</span>
               <span onClick={() => { setActivePage('terms'); window.scrollTo(0, 0); }} className="hover:underline transition-all">Terms & Conditions</span>
+              <span onClick={() => { setActivePage('refund'); window.scrollTo(0, 0); }} className="hover:underline transition-all">Cancellation & Refund Policy</span>
             </div>
           </div>
         </div>
